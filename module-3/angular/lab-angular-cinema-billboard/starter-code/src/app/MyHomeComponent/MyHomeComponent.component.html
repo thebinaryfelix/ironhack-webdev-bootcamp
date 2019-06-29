@@ -1,0 +1,16 @@
+<div class="container-fluid">
+    <h1 class="text-center mt-3 mb-5">All Movies</h1>
+
+    <div class="d-flex justify-content-center w-100">
+      <div class="w-100">
+        <ul class="d-flex justify-content-between">
+          <li *ngFor="let movie of moviesList">
+            <div [routerLink]="['/movie',movie.id]" class="d-flex flex-column align-items-center">
+              <img src="{{movie.poster}}" alt="" class="btn w-100">
+              <a class="mb-3 btn btn-dark" style="white-space: normal; color: #ffffff">{{movie.title}}</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+</div>

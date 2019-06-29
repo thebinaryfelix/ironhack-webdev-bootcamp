@@ -1,0 +1,10 @@
+ul{
+    padding: 0;
+}
+li{
+    list-style-type: none;
+}
+
+.btest{
+    border: 1px solid red;
+}

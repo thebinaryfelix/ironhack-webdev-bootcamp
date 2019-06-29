@@ -1,0 +1,15 @@
+<div *ngIf="dish" class="container d-flex flex-column align-items-center mt-5">
+  {{dish.name}}
+  <img [src]="dish.image" alt="" class="w-50"> {{dish.description}}
+  <a [routerLink]="['/']" class="mt-4 btn btn-primary">Home</a>
+</div>
+
+<ul *ngIf="ingredients">
+  <li *ngFor="let ingredient of ingredients">
+      {{ingredient.name}}
+    <div class="mb-3">
+      <input type="number" min="1" name="quantity" value="1" #quantity>
+      <a class="btn btn-success" (click)="addIngredient(dish._id, ingredient._id, quantity.value)">+</a>
+    </div>
+  </li>
+</ul>

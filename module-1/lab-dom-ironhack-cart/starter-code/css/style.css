@@ -1,0 +1,126 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  text-align: center;
+}
+
+.main-content,
+.footer-content {
+  max-width: 1500px;
+  margin: auto;
+  padding: 0 10%;
+}
+
+input {
+  border: solid 1px black;
+  padding: 5px;
+  border-radius: 3px;
+  box-sizing: border-box;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  padding: 10px 10px;
+  border-radius: 5px;
+}
+
+button:focus {
+  outline: 0;
+}
+
+footer {
+  text-align: center;
+  padding: 20px 0 20px 0;
+}
+
+footer p {
+  font-size: 2em;
+  margin-top: 1em;
+}
+
+.text-wrap {
+  width: 10em;
+  word-wrap: break-word;
+}
+
+.mr-input-product {
+  margin-right: 5%;
+}
+
+.min-width-70 {
+  min-width: 70px;
+  flex: 0 0 auto;
+}
+
+.container-input-product {
+  width: 40%;
+}
+
+.container-input-product input {
+  width: 100%;
+}
+
+.btn-delete {
+  background-color: rgb(161, 25, 34);
+  border: 2px solid rgb(129, 21, 28);
+}
+
+.btn-delete:active {
+  background-color: rgb(129, 21, 28);
+  border: 2px solid rgb(136, 18, 26);
+}
+
+.btn-create {
+  background-color: rgb(17, 115, 139);
+  border: 2px solid rgb(6, 80, 80);
+}
+
+.btn-create:active {
+  background-color: rgb(6, 80, 80);
+  border: 2px solid rgb(17, 115, 139);
+}
+
+.calculate-btn {
+  background-color: rgb(0, 102, 9);
+  border: 2px solid rgb(21, 80, 6);
+}
+
+.calculate-btn:active {
+  background-color: rgb(21, 80, 6);
+  border: 2px solid rgb(0, 102, 9);
+}
+
+.flexbox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1em 0 1em 0;
+}
+
+.flexbox-product {
+  display: flex;
+  width: 40%;
+  justify-content: flex-start;
+  margin: 1em 0 1em 0;
+}
+
+label {
+  margin: 0 20px 0 0;
+}
+
+.inline {
+  display: inline-block;
+}
+
+.float-right {
+  float: right;
+}
+
+#add {
+  background-color: rgb(243, 243, 243);
+}

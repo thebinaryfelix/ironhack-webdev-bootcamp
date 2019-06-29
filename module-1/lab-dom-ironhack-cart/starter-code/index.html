@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <script type="text/javascript" src="./js/index.js"></script>
+  <title>Ironhack cart</title>
+</head>
+
+
+<body>
+
+  <header>
+    <h1>Ironhack Merchandising Shop</h1>
+  </header>
+
+  <main>
+    <div class="main-content" id="main-list"></div>
+  </main>
+
+  <section id="add" class="main-content">
+    <div class="flexbox" id="add-product">
+      <div class="flexbox-product">
+        <div class="container-input-product mr-input-product">
+          <input id="input-name" type="text" placeholder="Input name">
+        </div>
+        <div class="container-input-product">
+          <input id="input-price" type="text" placeholder="Input price">
+        </div>
+      </div>
+      <div id="create-product">
+        <button id="new-item-create" class="btn-create" onclick="createNewItem()">Create</button>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-content">
+      <button id="calc-prices-button" class="calculate-btn">Calculate price</button>
+      <p id="total-price"></p>
+    </div>
+  </footer>
+</body>
+
+</html>

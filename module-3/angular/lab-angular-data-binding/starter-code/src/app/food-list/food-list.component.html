@@ -1,0 +1,50 @@
+<div class="container">
+
+  <div class="d-flex flex-column text-center align-items-center">
+    <label for="searchbox">
+      <h1>Search</h1>
+    </label>
+    <input type="text" [(ngModel)]="searchText" name="searchbox" class="w-50">
+  </div>
+
+  <div class="d-flex">
+    <div class="w-50 m-0">
+      <button class="btn btn-dark" (click)="toggle()">Add new food</button>
+      <div class="d-flex flex-column" *ngIf="show">
+        <label for="name" class="m-0 mt-2">Name</label>
+        <input type="text" [(ngModel)]="newFood.name" maxlength="15">
+
+        <label for="name" class="m-0 mt-2">Calories</label>
+        <input type="text" [(ngModel)]="newFood.calories" maxlength="15">
+
+        <label for="name" class="m-0 mt-2">Image</label>
+        <input type="text" [(ngModel)]="newFood.image" maxlength="15">
+
+        <button class="btn btn-primary mt-2" (click)="addFood(newFood.name, newFood.calories, newFood.image, newFood.quantity); toggle()">Add</button>
+      </div>
+
+      <ul class="p-0">
+        <li *ngFor="let food of foods | filter : searchText" class="d-flex w-100 m-0 mt-2 p-3 food-item">
+          <img [src]="food.image" alt="" class="img-responsive w-25 h-25">
+          <div class="d-flex flex-column align-items-center w-100">
+            <h3>{{food.name}}</h3>
+          </div>
+          <div>
+            <label for="qty">Quantity</label>
+            <input type="number" name="qty" value="1" min="1" #qty>
+            <button class="btn btn-dark btn-sm" (click)="addTodayList(food, qty)">Add to list</button>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="w-50 m-0 text-center">
+      <h1>Today's Foods</h1>
+      <ul *ngIf="todayList">
+        <li *ngFor="let foodItem of todayList">
+          <p>{{foodItem.name}} {{foodItem.caloriesToShow}} | Added {{foodItem.quantity}}</p>          
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

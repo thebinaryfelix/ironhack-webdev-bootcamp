@@ -1,0 +1,8 @@
+<ul>
+  <li *ngFor="let dish of dishes$" class="d-flex flex-column align-items-center">
+    <a [routerLink]="['/single-dish', dish._id]" class="w-25">
+      <img [src]="dish.image" alt="" class="w-100">
+    </a>
+    {{dish.name}}
+  </li>
+</ul>
